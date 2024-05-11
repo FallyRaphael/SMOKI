@@ -1,42 +1,54 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li v-for="(page, index) in pages" class="nav-item" :key="index">
-            <nav-bar-link
-              :page="page"
-              :isActive="activePage == index"
-              @click.prevent="navLinkClick(index)"></nav-bar-link>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <button class="btn btn-primary" @click.prevent="changeTheme()">
-            Toggle nav
-          </button>
-        </form>
+  <div>
+    <v-toolbar dark prominent color="primary">
+      <div class="grid" style=" "> <!-- Added margin-left and width -->
+        <v-toolbar-title class="grow"> <strong>SMOKI</strong></v-toolbar-title>
+        <div class="grid2">
+          <router-link to="/" class="custom-router-link">Home</router-link>
+          <router-link to="/events" class="custom-router-link">Events</router-link>
+          <router-link to="/map" class="custom-router-link">Map</router-link>
+        </div>
       </div>
-    </div>
-  </nav>
-
-
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
+    </v-toolbar>
+  </div>
 </template>
 
-<script>
-import NavBarLink from './NavBarLink.vue'
-export default {
-  components: { NavBarLink },
-  props: ['pages', 'activePage', 'navLinkClick'],
-  methods: {
-    changeTheme() {
-      this.useDarkNav = !this.useDarkNav;
-    }
-  },
+<style scoped>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin-left: 50px;
+
 }
 
-</script>
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin-top: 3px;
+}
+/* Scoped style or global CSS file */
+.custom-router-link {
+  text-decoration: none;
+  color: white; /* Default color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.custom-router-link:hover {
+  text-decoration: none;
+  color: lightblue; /* Color changes to blue on hover */
+}
+
+
+.router-link-active { /* Example: makes active links red */
+  font-weight: bold;
+}
+
+</style>

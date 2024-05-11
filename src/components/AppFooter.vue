@@ -5,7 +5,7 @@
         {{ link }}
       </v-btn>
       <v-col class="text-center mt-4" cols="12">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <strong>SMOKI</strong>
       </v-col>
     </v-row>  
   </v-footer>
@@ -17,9 +17,7 @@ export default {
       'Home',
       'About Us',
       'Team',
-      'Services',
-      'Blog',
-      'Contact Us',
+      'Contact Us'
     ],
   }),
 }
