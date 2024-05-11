@@ -2,36 +2,19 @@
     <v-app>
         <v-main>
             <navBar></navBar>
-            <div class="grid">
-                <search-bar></search-bar>
-            </div>
+            <Router-view></Router-view>
         </v-main>
         <app-footer> </app-footer>
     </v-app>
 </template>
 
-<style scoped>
-.grid {
-    display: grid;
-    grid-template-columns: 2fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    padding: 40px;
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-</style>
-
 <script>
-import SearchBar from './components/SearchBar.vue';
 import NavBar from './components/NavBar.vue';
 import AppFooter from './components/AppFooter.vue';
 
 
 export default {
     components: {
-        SearchBar,
         NavBar,
         AppFooter
     },
