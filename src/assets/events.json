@@ -96,5 +96,201 @@
         "description": "A pop-up market showcasing sustainable products, organic food, and DIY workshops.",
         "ticketPrice": "Free Entry",
         "moreInfo": "https://greenmarketvienna.at"
+    },
+    {
+        "id": 8,
+        "event": "Vienna Film Festival",
+        "date": "2024-05-20",
+        "time": "19:30",
+        "imageurl": "/viennafilm.jpg",
+        "geodata": {
+            "lat": 48.2068,
+            "lng": 16.3506
+        },
+        "description": "Enjoy a selection of international films and documentaries at this annual film festival.",
+        "ticketPrice": "€40",
+        "moreInfo": "https://viennafilmfestival.at"
+    },
+    {
+        "id": 9,
+        "event": "Belvedere Art Exhibition",
+        "date": "2024-10-05",
+        "time": "10:00",
+        "imageurl": "/belvedereart.jpg",
+        "geodata": {
+            "lat": 48.1918,
+            "lng": 16.3806
+        },
+        "description": "Explore exclusive art collections from around the globe featured in the historic Belvedere Palace.",
+        "ticketPrice": "€25",
+        "moreInfo": "https://belvedere.at"
+    },
+    {
+        "id": 10,
+        "event": "Vienna Marathon",
+        "date": "2024-04-22",
+        "time": "08:00",
+        "imageurl": "/viennamarathon.jpg",
+        "geodata": {
+            "lat": 48.2095,
+            "lng": 16.3725
+        },
+        "description": "Participate or cheer on runners in one of Europe's most scenic marathons.",
+        "ticketPrice": "€60",
+        "moreInfo": "https://viennamarathon.com"
+    },
+    {
+        "id": 11,
+        "event": "Donauinselfest Music Festival",
+        "date": "2024-06-30",
+        "time": "12:00",
+        "imageurl": "/donauinselfest.jpg",
+        "geodata": {
+            "lat": 48.2268,
+            "lng": 16.4219
+        },
+        "description": "Join Europe's largest free open-air music festival with multiple stages along the Danube.",
+        "ticketPrice": "Free Entry",
+        "moreInfo": "https://donauinselfest.at"
+    },
+    {
+        "id": 12,
+        "event": "Christmas Market at Rathausplatz",
+        "date": "2024-11-25",
+        "time": "15:00",
+        "imageurl": "/christmasmarket.jpg",
+        "geodata": {
+            "lat": 48.2107,
+            "lng": 16.3580
+        },
+        "description": "Experience the magical Vienna Christmas market with traditional crafts, foods, and lights.",
+        "ticketPrice": "Free Entry",
+        "moreInfo": "https://viennachristmasmarket.at"
+    },
+    {
+        "id": 13,
+        "event": "Hofburg Palace Historical Tours",
+        "date": "2024-07-15",
+        "time": "10:30",
+        "imageurl": "/hofburgpalace.jpg",
+        "geodata": {
+            "lat": 48.2070,
+            "lng": 16.3656
+        },
+        "description": "Explore the imperial residence with guided tours detailing its history and significance.",
+        "ticketPrice": "€35",
+        "moreInfo": "https://hofburgpalace.at"
+    },
+    {
+        "id": 14,
+        "event": "Vienna Jazz Festival",
+        "date": "2024-08-03",
+        "time": "20:00",
+        "imageurl": "/viennajazz.jpg",
+        "geodata": {
+            "lat": 48.2340,
+            "lng": 16.4160
+        },
+        "description": "Enjoy an evening of jazz from renowned artists at this prestigious music festival.",
+        "ticketPrice": "€50",
+        "moreInfo": "https://viennajazzfestival.at"
+    },
+    {
+        "id": 15,
+        "event": "Vienna Book Fair",
+        "date": "2024-09-28",
+        "time": "10:00",
+        "imageurl": "/viennabookfair.jpg",
+        "geodata": {
+            "lat": 48.2024,
+            "lng": 16.3689
+        },
+        "description": "Dive into the world of books with presentations from international authors and publishers.",
+        "ticketPrice": "€20",
+        "moreInfo": "https://viennabookfair.at"
+    },
+    {
+        "id": 16,
+        "event": "Leopold Museum Art Night",
+        "date": "2024-10-22",
+        "time": "18:00",
+        "imageurl": "/leopoldmuseum.jpg",
+        "geodata": {
+            "lat": 48.2032,
+            "lng": 16.3589
+        },
+        "description": "Explore modern art collections at night with live music and exclusive tours.",
+        "ticketPrice": "€30",
+        "moreInfo": "https://leopoldmuseum.org"
+    },
+    {
+        "id": 17,
+        "event": "Vienna International Dance Festival",
+        "date": "2024-08-10",
+        "time": "19:00",
+        "imageurl": "/viennadancefestival.jpg",
+        "geodata": {
+            "lat": 48.2101,
+            "lng": 16.3773
+        },
+        "description": "Experience breathtaking performances from ballet to contemporary dance.",
+        "ticketPrice": "€45",
+        "moreInfo": "https://viennadancefestival.at"
+    },
+    {
+        "id": 18,
+        "event": "Prater Festival",
+        "date": "2024-07-01",
+        "time": "15:00",
+        "imageurl": "/praterfestival.jpg",
+        "geodata": {
+            "lat": 48.2163,
+            "lng": 16.3969
+        },
+        "description": "Enjoy family-friendly rides, games, and food stalls at Vienna's iconic amusement park.",
+        "ticketPrice": "Free Entry",
+        "moreInfo": "https://praterfestival.at"
+    },
+    {
+        "id": 19,
+        "event": "Schönbrunn Summer Night Concert",
+        "date": "2024-06-18",
+        "time": "20:30",
+        "imageurl": "/schonbrunnnight.jpg",
+        "geodata": {
+            "lat": 48.1848,
+            "lng": 16.3122
+        },
+        "description": "Join the Vienna Philharmonic for an open-air concert in the gardens of Schönbrunn Palace.",
+        "ticketPrice": "Free Entry",
+        "moreInfo": "https://somemernachtskonzert.at"
+    },
+    {
+        "id": 20,
+        "event": "Naschmarkt Delicacies Tour",
+        "date": "2024-09-05",
+        "time": "11:00",
+        "imageurl": "/naschmarkt.jpg",
+        "geodata": {
+            "lat": 48.1981,
+            "lng": 16.3616
+        },
+        "description": "Explore Vienna's most famous market and taste local and international specialties.",
+        "ticketPrice": "€10",
+        "moreInfo": "https://naschmarkt-tours.at"
+    },
+    {
+        "id": 21,
+        "event": "Vienna River Cruising Day",
+        "date": "2024-08-20",
+        "time": "10:00",
+        "imageurl": "/viennarivercruise.jpg",
+        "geodata": {
+            "lat": 48.2225,
+            "lng": 16.4256
+        },
+        "description": "Relax and enjoy the sights of Vienna from a different perspective on the Danube.",
+        "ticketPrice": "€55",
+        "moreInfo": "https://danubecruises.at"
     }
 ]
