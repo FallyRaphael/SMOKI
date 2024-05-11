@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "event": "Konzerthaus Wien",
+        "date": "2024-09-08",
+        "time": "20:00",
+        "imageurl": "/konzerthaus.jpg",
+        "geodata": {
+            "lat": 48.2047,
+            "lng": 16.3695
+        },
+        "description": "Experience a night of classical music with performances by renowned orchestras.",
+        "ticketPrice": "€50",
+        "moreInfo": "https://konzerthaus.at"
+    },
+    {
+        "id": 2,
+        "event": "Vienna State Opera",
+        "date": "2024-10-15",
+        "time": "19:00",
+        "imageurl": "/konzerthaus.jpg",
+        "geodata": {
+            "lat": 48.2035,
+            "lng": 16.3691
+        },
+        "description": "Join us for an enchanting evening of opera with a spectacular new production.",
+        "ticketPrice": "€80",
+        "moreInfo": "https://wiener-staatsoper.at"
+    },
+    {
+        "id": 3,
+        "event": "Musikverein",
+        "date": "2024-11-20",
+        "time": "18:30",
+        "imageurl": "/konzerthaus.jpg",
+        "geodata": {
+            "lat": 48.2006,
+            "lng": 16.3728
+        },
+        "description": "A special concert featuring award-winning composers and their best works.",
+        "ticketPrice": "€70",
+        "moreInfo": "https://musikverein.at"
+    },
+    {
+        "id": 4,
+        "event": "Vienna Urban Art Festival",
+        "date": "2024-07-12",
+        "time": "14:00",
+        "imageurl": "/straßenfestival.jpg",
+        "geodata": {
+            "lat": 48.2077,
+            "lng": 16.3745
+        },
+        "description": "Explore urban art in a vibrant festival atmosphere with workshops, music, and street food.",
+        "ticketPrice": "€15",
+        "moreInfo": "https://vienna-urban-art.at"
+    },
+    {
+        "id": 5,
+        "event": "Tech and Science Teen Camp",
+        "date": "2024-08-03",
+        "time": "10:00",
+        "imageurl": "/techveranstalltung.jpg",
+        "geodata": {
+            "lat": 48.2082,
+            "lng": 16.3738
+        },
+        "description": "Hands-on activities and inspiring talks for teens interested in technology and sciences.",
+        "ticketPrice": "Free",
+        "moreInfo": "https://teensciencecamp.at"
+    },
+    {
+        "id": 6,
+        "event": "Danube Island Kite Festival",
+        "date": "2024-09-20",
+        "time": "11:00",
+        "imageurl": "/donaukite.jpg",
+        "geodata": {
+            "lat": 48.2201,
+            "lng": 16.4146
+        },
+        "description": "A fun-filled day of kite flying, competitions, and workshops suitable for all ages.",
+        "ticketPrice": "€10",
+        "moreInfo": "https://danubekitefestival.at"
+    },
+    {
+        "id": 7,
+        "event": "Green Market Pop-Up",
+        "date": "2024-06-25",
+        "time": "09:00",
+        "imageurl": "/markt.jpg",
+        "geodata": {
+            "lat": 48.2166,
+            "lng": 16.3798
+        },
+        "description": "A pop-up market showcasing sustainable products, organic food, and DIY workshops.",
+        "ticketPrice": "Free Entry",
+        "moreInfo": "https://greenmarketvienna.at"
+    }
+]

@@ -12,10 +12,13 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@vue-leaflet/vue-leaflet": "^0.10.1",
     "bootstrap": "^5.3.3",
+    "leaflet": "^1.9.4",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2",
+    "vue3-leaflet": "^1.0.48",
     "vuetify": "^3.6.5"
   },
   "devDependencies": {

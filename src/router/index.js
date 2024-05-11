@@ -20,6 +20,11 @@ const routes = [
     path: '/events',
     name: 'Events',
     component: Events
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import('../components/AppProfile.vue')
   }
 ]
 
