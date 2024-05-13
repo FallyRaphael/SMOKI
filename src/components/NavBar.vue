@@ -50,7 +50,7 @@ export default {
 
 .custom-router-link:hover {
   text-decoration: none;
-  color: lightblue;
+  color: #5C6BC0;
 }
 
 
