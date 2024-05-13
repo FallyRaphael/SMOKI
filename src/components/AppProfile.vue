@@ -12,7 +12,7 @@
                             class="text-center"
                           >Login in to Your Account</h4>
                           <h6
-                            class="text-center  grey--text ">Log in to your account so you can continue builiding <br>and editing your onboarding flows</h6>
+                            class="text-center  grey--text ">Log in to your Account <br>and register your own events</h6>
                           <v-row align="center" justify="center">
                             <v-col cols="12" sm="8">
                             <v-text-field
