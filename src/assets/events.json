@@ -18,7 +18,7 @@
         "event": "Vienna State Opera",
         "date": "2024-10-15",
         "time": "19:00",
-        "imageurl": "/konzerthaus.jpg",
+        "imageurl": "/opera.jpg",
         "geodata": {
             "lat": 48.2035,
             "lng": 16.3691
@@ -102,7 +102,7 @@
         "event": "Vienna Film Festival",
         "date": "2024-05-20",
         "time": "19:30",
-        "imageurl": "/viennafilm.jpg",
+        "imageurl": "/filmfestival.jpg",
         "geodata": {
             "lat": 48.2068,
             "lng": 16.3506
@@ -130,7 +130,7 @@
         "event": "Vienna Marathon",
         "date": "2024-04-22",
         "time": "08:00",
-        "imageurl": "/viennamarathon.jpg",
+        "imageurl": "/viennamarathon.webp",
         "geodata": {
             "lat": 48.2095,
             "lng": 16.3725
