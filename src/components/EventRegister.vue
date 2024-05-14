@@ -15,7 +15,6 @@
               <v-text-field label="Ticket Price" v-model="ticketPrice" :rules="[rules.required, rules.number]"
                 required></v-text-field>
               <v-text-field label="More Info Link" v-model="moreInfoLink" :rules="[rules.url]"></v-text-field>
-
               <div id="map" style="height: 400px;">
                 <l-map style="height: 100%;" :zoom="zoom" :center="mapCenter" @click="setEventLocation">
                   <l-tile-layer :url="tileLayerUrl"></l-tile-layer>
