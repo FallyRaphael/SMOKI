@@ -33,6 +33,7 @@
     }
 
     .header {
+        margin-top: 40px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -54,7 +55,7 @@
 
     <script>
     //import SearchBar from './SearchBar.vue';
-    import eventData from '../assets/events.json';
+    import eventData from '../../../smoki-backend/events.json';
 
     export default {
         components: {

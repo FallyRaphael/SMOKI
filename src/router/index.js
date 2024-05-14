@@ -25,12 +25,37 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: () => import('../components/AppProfile.vue')
+  },
+  {
+    path: '/eventregister',
+    name: 'EventRegister',
+    component: () => import('../components/EventRegister.vue')
+  },
+  {
+    path: '/',
+    name: 'Logout',
+    component: Home
   }
 ]
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
+
+router.beforeEach((to, from, next) => {
+  const publicPages = ['/', '/map', '/events', '/profile'];
+  const authRequired = !publicPages.includes(to.path);
+  const loggedIn = localStorage.getItem('user');
+
+  if (authRequired && !loggedIn) {
+    return next('/profile');
+  }
+
+  next();
+});
+
 
 export default router

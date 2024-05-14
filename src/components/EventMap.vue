@@ -36,7 +36,7 @@
 <script>
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet';
 import 'leaflet/dist/leaflet.css';
-import events from '../assets/events.json';
+import events from '../../../smoki-backend/events.json';
 
 export default {
     components: {

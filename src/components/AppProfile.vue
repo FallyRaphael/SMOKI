@@ -20,9 +20,6 @@
                           <v-col cols="12" sm="7">
                             <v-checkbox label="Remember Me" class="mt-n1" color="blue"></v-checkbox>
                           </v-col>
-                          <v-col cols="12" sm="5">
-                            <span class="caption blue--text">Forgot password</span>
-                          </v-col>
                         </v-row>
                         <v-btn color="#5c6bc0" dark block tile @click="login">Log in</v-btn>
                         <h5 class="text-center grey--text mt-4 mb-3">Or Log in using</h5>
@@ -114,45 +111,7 @@
   </v-container>
 </template>
 
-<script>
-import users from '@/assets/users.json'; // Path to your users JSON file
 
-export default {
-  data: () => ({
-    step: 1,
-    user: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: ''
-    },
-    loginUser: {
-      email: '',
-      password: ''
-    },
-    users: users
-  }),
-  methods: {
-    login() {
-      const user = this.users.find(user => user.email === this.loginUser.email && user.password === this.loginUser.password);
-      if (user) {
-        alert('Login successful');
-      } else {
-        alert('Invalid credentials');
-      }
-    },
-    register() {
-      const existingUser = this.users.find(user => user.email === this.user.email);
-      if (existingUser) {
-        alert('Email already exists!');
-      } else {
-        this.users.push({ ...this.user, id: this.users.length + 1 });
-        alert('Registration successful');
-      }
-    }
-  }
-}
-</script>
 
 <style scoped>
 .v-application .rounded-bl-xl {
@@ -163,3 +122,55 @@ export default {
   border-bottom-right-radius: 300px !important;
 }
 </style>
+<script>
+import AuthService from "../services/AuthService.js";
+
+
+export default {
+  data() {
+    return {
+      step: 1,
+      user: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: ''
+      },
+      loginUser: {
+        email: '',
+        password: ''
+      }
+    };
+  },
+  methods: {
+    async login() {
+      try {
+        const response = await AuthService.login(this.loginUser);
+        if (response.token) {
+          this.$store.dispatch('login', {username: this.loginUser.email});
+          this.$router.push({ name: 'EventRegister' }); // Redirect to dashboard or wherever you want
+          alert('Login successful');
+        }
+      } catch (error) {
+        alert('Invalid credentials');
+      }
+    },
+    async register() {
+      try {
+        // eslint-disable-next-line no-unused-vars
+        const response = await AuthService.register(this.user);
+        alert('Registration successful');
+        this.reloadRoute();
+        this.$router.push('/profile'); // Redirect to login page after successful registration
+      } catch (error) {
+        if (error.response && error.response.status === 409) {
+          alert('Email already exists!');
+        } else {
+          alert('Failed to register. Please try again.');
+        }
+      }
+    }
+    
+  }
+}
+</script>
