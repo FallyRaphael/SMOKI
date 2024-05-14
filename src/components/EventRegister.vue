@@ -6,42 +6,24 @@
           <v-card-title>Register an Event</v-card-title>
           <v-card-text>
             <v-form ref="form" v-model="isFormValid">
-              <v-text-field
-                label="Event Name"
-                v-model="eventName"
-                :rules="[rules.required, rules.maxLength(50)]"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Event Date"
-                v-model="eventDate"
-                :rules="[rules.required, rules.dateFormat]"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Event Time"
-                v-model="eventTime"
-                :rules="[rules.required, rules.timeFormat]"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Latitude"
-                v-model="eventLat"
-                :rules="[rules.required, rules.number]"
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Longitude"
-                v-model="eventLng"
-                :rules="[rules.required, rules.number]"
-                required
-              ></v-text-field>
-              <v-textarea
-                label="Description"
-                v-model="eventDescription"
-                :rules="[rules.required, rules.maxLength(200)]"
-                required
-              ></v-textarea>
+              <v-text-field label="Event Name" v-model="eventName" :rules="[rules.required, rules.maxLength(50)]"
+                required></v-text-field>
+              <v-text-field label="Event Date" v-model="eventDate" :rules="[rules.required, rules.dateFormat]"
+                required></v-text-field>
+              <v-text-field label="Event Time" v-model="eventTime" :rules="[rules.required, rules.timeFormat]"
+                required></v-text-field>
+              <v-text-field label="Ticket Price" v-model="ticketPrice" :rules="[rules.required, rules.number]"
+                required></v-text-field>
+              <v-text-field label="More Info Link" v-model="moreInfoLink" :rules="[rules.url]"></v-text-field>
+
+              <div id="map" style="height: 400px;">
+                <l-map style="height: 100%;" :zoom="zoom" :center="mapCenter" @click="setEventLocation">
+                  <l-tile-layer :url="tileLayerUrl"></l-tile-layer>
+                  <l-marker :lat-lng="eventLocation"></l-marker>
+                </l-map>
+              </div>
+              <v-textarea label="Description" v-model="eventDescription" :rules="[rules.required, rules.maxLength(200)]"
+                required></v-textarea>
             </v-form>
           </v-card-text>
           <v-card-actions>
@@ -55,24 +37,38 @@
 
 <script>
 import axios from 'axios';
+import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet';
+import 'leaflet/dist/leaflet.css';
+import router from '../router';
 
 export default {
+  components: {
+    LMap,
+    LTileLayer,
+    LMarker
+  },
   data() {
     return {
       eventName: '',
       eventDate: '',
       eventTime: '',
-      eventImage: null,
+      ticketPrice: '',
+      moreInfoLink: '',
       eventLat: '',
       eventLng: '',
       eventDescription: '',
       isFormValid: false,
+      mapCenter: [48.2225, 16.4256], // Default center, can be changed
+      zoom: 13,
+      eventLocation: [48.2225, 16.4256], // Default location
+      tileLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       rules: {
         required: value => !!value || 'Required.',
         maxLength: max => value => value.length <= max || `Max ${max} characters.`,
         dateFormat: value => /^\d{4}-\d{2}-\d{2}$/.test(value) || 'Date must be in YYYY-MM-DD format.',
         timeFormat: value => /^\d{2}:\d{2}$/.test(value) || 'Time must be in hh:mm format.',
-        number: value => !isNaN(parseFloat(value)) && isFinite(value) || 'Must be a number.'
+        number: value => !isNaN(parseFloat(value)) && isFinite(value) || 'Must be a number.',
+        url: value => !value || /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i.test(value) || 'Must be a valid URL.'
       }
     };
   },
@@ -87,12 +83,15 @@ export default {
           eventName: this.eventName,
           eventDate: this.eventDate,
           eventTime: this.eventTime,
+          ticketPrice: parseFloat(this.ticketPrice),
+          moreInfoLink: this.moreInfoLink,
           eventImage: "/viennacruising.jpg", // Handle this appropriately for file upload
           eventGeodata: geodata,
           eventDescription: this.eventDescription
         })
         .then(response => {
           alert('Event registered successfully!');
+          router.push('/events');
           this.resetForm();
         })
         .catch(error => {
@@ -107,15 +106,25 @@ export default {
       this.eventName = '';
       this.eventDate = '';
       this.eventTime = '';
-      this.eventImage = null;
+      this.ticketPrice = '';
+      this.moreInfoLink = '';
       this.eventLat = '';
       this.eventLng = '';
       this.eventDescription = '';
       this.isFormValid = false;
+    },
+    setEventLocation(event) {
+      const { lat, lng } = event.latlng;
+      this.eventLat = lat.toFixed(6);
+      this.eventLng = lng.toFixed(6);
+      this.eventLocation = [lat, lng];
     }
   }
 }
 </script>
 
 <style scoped>
+#map {
+  margin-top: 20px;
+}
 </style>
