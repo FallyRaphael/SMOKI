@@ -67,6 +67,10 @@
 .footer-stick-to-bottom {
   width: 100%;
 }
+
+.pa-4 {
+  background-color: #f9f9f9;
+}
 </style>
 
 <script>
