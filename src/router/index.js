@@ -35,6 +35,11 @@ const routes = [
     path: '/',
     name: 'Logout',
     component: Home
+  },
+  {
+    path: '/update-profile',
+    name: 'UpdateProfile',
+    component: () => import('../components/UpdateProfile.vue')
   }
 ]
 

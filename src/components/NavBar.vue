@@ -10,6 +10,8 @@
           <router-link :to="{ name: 'Map' }" class="custom-router-link">Map</router-link>
           <router-link v-if="isAuthenticated" :to="{ name: 'EventRegister' }" class="custom-router-link">Register
             Event</router-link>
+          <router-link v-if="isAuthenticated" :to="{ name: 'UpdateProfile' }" class="custom-router-link">Update
+            Profile</router-link>
           <router-link v-if="!isAuthenticated" :to="{ name: 'Profile' }"
             class="custom-router-link">Profile</router-link>
           <router-link v-if="isAuthenticated" @click="logout" :to="{ name: 'Logout' }"
@@ -47,7 +49,7 @@ export default {
 </script>
 
 <style scoped>
- .v-toolbar {
+.v-toolbar {
   background-color: white;
   width: 80% !important;
 }
