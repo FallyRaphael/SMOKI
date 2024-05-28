@@ -13,8 +13,6 @@
                                     class="mt-16" />
                                 <v-text-field label="Email" v-model="user.email" outlined dense color="blue"
                                     class="mt-16" />
-                                <v-text-field label="Password" v-model="user.password" type="password" outlined dense
-                                    color="blue" class="mt-16" />
                                 <v-btn color="#5c6bc0" dark block tile @click="updateProfile">Update</v-btn>
                             </v-col>
                         </v-row>
@@ -35,8 +33,7 @@ export default {
             user: {
                 firstName: '',
                 lastName: '',
-                email: '',
-                password: ''
+                email: ''
             }
         };
     },
@@ -53,8 +50,7 @@ export default {
                     this.user = {
                         firstName: response.data.firstName,
                         lastName: response.data.lastName,
-                        email: response.data.email,
-                        password: '' // Leave password empty, user can enter new password if they want to change it
+                        email: response.data.email
                     };
                 } catch (error) {
                     console.error('Failed to fetch user data:', error);
@@ -79,8 +75,7 @@ export default {
             this.user = {
                 firstName: currentUser.firstName,
                 lastName: currentUser.lastName,
-                email: currentUser.email,
-                password: '' // Leave password empty, user can enter new password if they want to change it
+                email: currentUser.email // Leave password empty, user can enter new password if they want to change it
             };
         } else {
             this.$router.push({ name: 'Profile' });
